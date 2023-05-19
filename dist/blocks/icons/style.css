@@ -56,3 +56,10 @@
     height: 25px;
   }
 }
+
+@media screen and (max-width: 769px) {
+  .icons__item {
+    width: 30px;
+    height: 30px;
+  }
+}

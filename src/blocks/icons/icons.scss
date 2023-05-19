@@ -29,6 +29,11 @@
       height: 25px;
     }
 
+    @media screen and (max-width: 769px) {
+      width: 30px;
+      height: 30px;
+    }
+
     & svg,
     & img {
       display: flex;
