@@ -2,4 +2,19 @@
 
 .phones {
   position: relative;
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    text-align: right;
+    color: #363435;
+
+    &:hover {
+      color: $violet;
+    }
+  }
 }

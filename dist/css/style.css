@@ -27,8 +27,8 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
-  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
   line-height: 120%;
   color: #363435;
   font-weight: 400;
@@ -44,7 +44,7 @@ body {
 }
 
 section {
-  padding: 45px 30px;
+  padding: 70px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
@@ -64,34 +64,14 @@ main {
 }
 
 .cont {
-  max-width: 1450px;
+  max-width: 1640px;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .swiper {
   overflow: hidden;
-}
-
-.section-title {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 120%;
-  color: #0D0D0D;
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-input:focus,
-input:focus-visible {
-  outline: 2px solid blue;
 }
 
 .btn {
@@ -185,6 +165,36 @@ input:focus-visible {
 
 .header {
   position: relative;
+  padding: 40px 30px;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  row-gap: 5px;
 }
 
 .hamburger {
@@ -193,6 +203,99 @@ input:focus-visible {
 
 .icons {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.icons__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.icons__item svg,
+.icons__item img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  text-decoration: none;
+  color: #363435;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+}
+
+.logo img,
+.logo svg {
+  width: 118px;
+  height: 118px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu__link {
+  font-size: 24px;
+  line-height: 120%;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  color: #363435;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
 }
 
 .mobile {
@@ -203,19 +306,37 @@ input:focus-visible {
   position: relative;
 }
 
+.phones__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+  text-align: right;
+  color: #363435;
+}
+
+.phones__item:hover {
+  color: #7700FF;
+}
+
 @media screen and (max-width: 992px) {
+  section {
+    padding: 50px 15px;
+  }
+
   .footer {
     padding: 50px 15px;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 769px) {
   section {
-    padding: 30px 15px;
-  }
-
-  .section-title {
-    font-size: 24px;
-    text-align: center;
+    padding: 35px 15px;
   }
 }

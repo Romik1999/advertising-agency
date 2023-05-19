@@ -3,8 +3,8 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
-  font-size: 18px;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
   line-height: 120%;
   color: #363435;
   font-weight: 400;
@@ -20,7 +20,7 @@ body {
 }
 
 section {
-  padding: 45px 30px;
+  padding: 70px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
@@ -40,43 +40,24 @@ main {
 }
 
 .cont {
-  max-width: 1450px;
+  max-width: 1640px;
   width: 100%;
   margin: 0 auto;
   position: relative;
-}
-
-.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .swiper {
   overflow: hidden;
 }
 
-.section-title {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 120%;
-  color: #0D0D0D;
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-input:focus,
-input:focus-visible {
-  outline: 2px solid blue;
-}
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 992px) {
   section {
-    padding: 30px 15px;
+    padding: 50px 15px;
   }
+}
 
-  .section-title {
-    font-size: 24px;
-    text-align: center;
+@media screen and (max-width: 769px) {
+  section {
+    padding: 35px 15px;
   }
 }

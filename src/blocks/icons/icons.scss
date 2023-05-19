@@ -2,4 +2,23 @@
 
 .icons {
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 15px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    & svg,
+    & img {
+      display: flex;
+      object-fit: contain;
+    }
+  }
 }

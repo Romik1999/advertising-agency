@@ -1,6 +1,23 @@
 @import "../../scss/colors.scss";
 
 .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  text-decoration: none;
+
+  color: $black;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+
+  & img,
+  & svg{
+    width: 118px;
+    height: 118px;
+    object-fit: contain;
+  }
+
   @media screen and (max-width: 992px) {
   }
 }
