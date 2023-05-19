@@ -25,8 +25,36 @@
   transition: 0.2s;
   cursor: pointer;
   color: #363435;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu__link:hover {
-  text-decoration: underline;
+  color: #7700FF;
+}
+
+@media screen and (max-width: 1260px) {
+  .menu__link {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .menu__link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .menu__items {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .menu__link {
+    font-size: 14px;
+  }
 }

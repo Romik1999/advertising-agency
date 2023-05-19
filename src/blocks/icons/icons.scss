@@ -8,12 +8,26 @@
   justify-content: flex-end;
   column-gap: 15px;
 
+  @media screen and (max-width: 1120px) {
+    column-gap: 10px;
+  }
+
   &__item {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
+
+    @media screen and (max-width: 1120px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 25px;
+      height: 25px;
+    }
 
     & svg,
     & img {

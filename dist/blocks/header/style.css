@@ -31,3 +31,25 @@
           align-items: flex-end;
   row-gap: 5px;
 }
+
+.header__hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1260px) {
+  .header {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    padding: 20px 15px;
+  }
+
+  .header__wrapper {
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+}

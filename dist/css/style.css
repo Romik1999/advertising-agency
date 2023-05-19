@@ -197,6 +197,10 @@ main {
   row-gap: 5px;
 }
 
+.header__hamburger {
+  display: none;
+}
+
 .hamburger {
   position: relative;
 }
@@ -292,10 +296,14 @@ main {
   transition: 0.2s;
   cursor: pointer;
   color: #363435;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu__link:hover {
-  text-decoration: underline;
+  color: #7700FF;
 }
 
 .mobile {
@@ -319,15 +327,119 @@ main {
   line-height: 120%;
   text-align: right;
   color: #363435;
+  white-space: nowrap;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .phones__item:hover {
   color: #7700FF;
 }
 
+@media screen and (max-width: 1260px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    font-size: 22px;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+
+  .logo img,
+  .logo svg {
+    width: 94px;
+    height: 94px;
+  }
+
+  .menu__link {
+    font-size: 20px;
+  }
+
+  .phones__item {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .icons {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .icons__item {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo {
+    font-size: 18px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .logo img,
+  .logo svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .menu__link {
+    font-size: 16px;
+  }
+
+  .phones__item {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   section {
     padding: 50px 15px;
+  }
+
+  .header {
+    padding: 20px 15px;
+  }
+
+  .header__wrapper {
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
+
+  .icons__item {
+    width: 25px;
+    height: 25px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .logo img,
+  .logo svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu__items {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .menu__link {
+    font-size: 14px;
+  }
+
+  .phones__item {
+    font-size: 14px;
   }
 
   .footer {
