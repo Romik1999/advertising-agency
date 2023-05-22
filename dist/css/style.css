@@ -74,6 +74,22 @@ main {
   overflow: hidden;
 }
 
+.swiper-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  margin-top: 20px;
+}
+
 .btn {
   text-decoration: none;
   cursor: pointer;
@@ -86,7 +102,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 15px 25px;
+  padding: 15px;
   height: 60px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -436,6 +452,65 @@ main {
   color: #7700FF;
 }
 
+.section-title {
+  font-weight: 900;
+  font-size: 44px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.swiper-arrow {
+  min-width: 40px;
+  width: 50px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-arrow.swiper-button-disabled {
+  cursor: not-allowed;
+}
+
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  position: unset;
+  width: auto !important;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  min-width: 15px;
+  background: rgba(54, 52, 53, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0038FF;
+}
+
 .hero {
   position: relative;
   padding-top: 270px;
@@ -556,6 +631,123 @@ main {
 
 .advantages__text {
   font-size: 28px;
+}
+
+.services-cards__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+}
+
+.services-cards__item {
+  width: calc(33.33% - 14px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: unset;
+}
+
+.services-cards__bottom {
+  display: none;
+}
+
+.services-card {
+  background: #FFFFFF;
+  -webkit-filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+.services-card:hover {
+  -webkit-filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.2));
+}
+
+.services-card:hover .services-card__image img {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.services-card__image {
+  width: 100%;
+  height: 230px;
+  min-height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.services-card__image img,
+.services-card__image svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.services-card__body {
+  padding: 28px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+}
+
+.services-card__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #7700FF;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+.services-card__text {
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.services-card__button {
+  max-width: 370px;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1641px) {
@@ -720,6 +912,25 @@ main {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .services-card__image {
+    height: 200px;
+    min-height: 200px;
+  }
+
+  .services-card__body {
+    padding: 20px 15px;
+  }
+
+  .services-card__title {
+    font-size: 20px;
+  }
+
+  .services-card__text {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 1120px) {
   .icons {
     -webkit-column-gap: 10px;
@@ -797,6 +1008,12 @@ main {
     padding: 50px 15px;
   }
 
+  .btn {
+    font-size: 16px;
+    height: 50px;
+    padding: 10px;
+  }
+
   .header {
     padding: 20px 15px;
   }
@@ -840,6 +1057,11 @@ main {
     padding: 50px 15px;
   }
 
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
   .hero {
     padding-top: 135px;
   }
@@ -878,16 +1100,48 @@ main {
   .advantages__item {
     max-width: calc(50% - 10px);
   }
+
+  .services-cards__items {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+    row-gap: 0;
+  }
+
+  .services-cards__item {
+    width: 100%;
+  }
+
+  .services-cards__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .services-card__image {
+    height: 120px;
+    min-height: 120px;
+  }
+
+  .services-card__body {
+    padding: 15px 10px;
+    row-gap: 10px;
+  }
+
+  .services-card__title {
+    font-size: 16px;
+  }
+
+  .services-card__text {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 769px) {
   section {
     padding: 35px 15px;
-  }
-
-  .btn {
-    font-size: 16px;
-    height: 50px;
   }
 
   .header {
@@ -955,6 +1209,10 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .section-title {
+    text-align: center;
   }
 
   .hero {
@@ -1041,6 +1299,12 @@ main {
 
   .advantages__item {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .services-card__body {
+    row-gap: 7px;
   }
 }
 

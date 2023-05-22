@@ -3,15 +3,15 @@
 .section-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 120%;
+  margin-top: 0;
   margin-bottom: 60px;
 
   @media screen and (max-width: 992px) {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 30px;
   }
 
   @media screen and (max-width: 769px) {
-    font-size: 24px;
+    text-align: center;
   }
 }

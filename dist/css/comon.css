@@ -50,6 +50,22 @@ main {
   overflow: hidden;
 }
 
+.swiper-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 992px) {
   section {
     padding: 50px 15px;

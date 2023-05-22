@@ -1,0 +1,16 @@
+@import "../../scss/colors.scss";
+
+.swiper-arrow {
+  min-width: 40px;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+
+  &.swiper-button-disabled{
+    cursor: not-allowed;
+  }
+}

@@ -64,66 +64,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
     modal('.modal', 'modal--active', '[data-modal-auth]', '.modal__close');
 
-// Accordion
-    const tabs = document.querySelector('.modal-content');
-    const tabsBtn = document.querySelectorAll('.modal-triggers__item');
-    const tabsContent = document.querySelectorAll('.modal-content__form');
-
-    if (tabs) {
-        tabs.addEventListener('click', (e) => {
-            if (e.target.classList.contains('modal-triggers__item')) {
-                const tabsPath = e.target.dataset.tabsPath;
-                tabsBtn.forEach(el => {
-                    el.classList.remove('modal-triggers__item--active')
-                });
-                document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('modal-triggers__item--active');
-                tabsHandler(tabsPath);
+    if (window.innerWidth < 993) {
+        const servicesSlider = new Swiper('.services-cards', {
+            slidesPerView: 3,
+            grid: {
+                rows: 2,
+                fill: "row",
+            },
+            spaceBetween: 10,
+            pagination: {
+                el: '.services-cards__pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.services-cards__arrow--next',
+                prevEl: '.services-cards__arrow--prev',
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    grid: {
+                        rows: 2,
+                        fill: "row"
+                    },
+                },
+                576: {
+                    slidesPerView: 2,
+                    grid: {
+                        rows: 2,
+                        fill: "row"
+                    },
+                },
+                768: {
+                    slidesPerView: 3,
+                    grid: {
+                        rows: 2,
+                        fill: "row"
+                    },
+                },
             }
         });
     }
-
-    const tabsHandler = (path) => {
-        tabsContent.forEach(el => {
-            el.classList.remove('modal-content__form--active')
-        });
-        document.querySelector(`[data-tabs-target="${path}"]`).classList.add('modal-content__form--active');
-    };
-
-// menu
-
-    let menuBtn = document.querySelector('[data-menu]');
-    let headerMenu = document.querySelector('.header-search');
-    let header = document.querySelector('header');
-    let input = document.querySelector('.search-form__input');
-
-    menuBtn.addEventListener('click', () => {
-        headerMenu.classList.toggle('active');
-        header.classList.toggle('active');
-        input.focus();
-    });
-
-    headerMenu.addEventListener(
-        "mouseleave",
-        (event) => {
-            headerMenu.classList.remove('active');
-            header.classList.remove('active');
-        },
-        false
-    );
-
-
-    document.querySelector('body').on('click', '[data-scroll]', (e) => {
-        e.preventDefault();
-        const $link = document.querySelector(e.currentTarget);
-        let index = $link.data('scrollIndex');
-        if (index === undefined) {
-            index = 0;
-        }
-        const $el = document.querySelector($link.data('scroll')).eq(index);
-        document.querySelector('html, body').animate(
-            {
-                scrollTop: $el.offset().top - (document.querySelector(window).getBoundingClientRect().height * 8) / 100,
-            }, 600
-        );
-    });
 });
