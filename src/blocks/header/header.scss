@@ -3,6 +3,14 @@
 .header {
   position: relative;
   padding: 40px 30px;
+  box-sizing: border-box;
+
+  &--absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   @media screen and (max-width: 1260px) {
     padding: 20px 30px;
