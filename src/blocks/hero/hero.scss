@@ -5,6 +5,80 @@
   padding-top: 270px;
   padding-bottom: 70px;
 
+  @media screen and (max-width: 1641px) {
+    padding-top: 240px;
+  }
+  @media screen and (max-width: 1401px) {
+    padding-top: 216px;
+  }
+  @media screen and (max-width: 1270px) {
+    padding-top: 190px;
+  }
+  @media screen and (max-width: 1120px) {
+    padding-top: 162px;
+  }
+  @media screen and (max-width: 992px) {
+    padding-top: 135px;
+  }
+  @media screen and (max-width: 769px) {
+    padding-top: 100px;
+  }
+  @media screen and (max-width: 576px) {
+    max-width: 100%;
+  }
+
+  &__info {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 170px;
+
+    @media screen and (max-width: 1641px) {
+      margin-bottom: 150px;
+    }
+    @media screen and (max-width: 1401px) {
+      margin-bottom: 130px;
+      max-width: 600px;
+    }
+    @media screen and (max-width: 1270px) {
+      margin-bottom: 120px;
+    }
+    @media screen and (max-width: 1120px) {
+      margin-bottom: 102px;
+      max-width: 500px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-bottom: 85px;
+    }
+    @media screen and (max-width: 769px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @media screen and (max-width: 769px) {
+      display: flex;
+      height: 270px;
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: 576px) {
+      height: 220px;
+    }
+    @media screen and (max-width: 360px) {
+      height: 180px;
+    }
+
+    & img,
+    & svg{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
   &__img {
     position: absolute;
     z-index: -1;
@@ -12,11 +86,62 @@
     &--right {
       top: 0;
       right: 0;
+
+      & img,
+      & svg {
+        @media screen and (max-width: 1641px) {
+          height: 747px;
+        }
+        @media screen and (max-width: 1401px) {
+          height: 664px;
+        }
+        @media screen and (max-width: 1270px) {
+          height: 580px;
+        }
+        @media screen and (max-width: 1120px) {
+          height: 500px;
+        }
+        @media screen and (max-width: 992px) {
+          height: 420px;
+        }
+        @media screen and (max-width: 769px) {
+          display: none;
+        }
+      }
     }
 
     &--left {
       bottom: 0;
       left: 0;
+
+      & img,
+      & svg {
+        @media screen and (max-width: 1641px) {
+          height: 625px;
+        }
+        @media screen and (max-width: 1401px) {
+          height: 556px;
+        }
+        @media screen and (max-width: 1270px) {
+          height: 486px;
+        }
+        @media screen and (max-width: 1120px) {
+          height: 417px;
+        }
+        @media screen and (max-width: 992px) {
+          height: 348px;
+        }
+        @media screen and (max-width: 769px) {
+          display: none;
+        }
+      }
+    }
+
+    & img,
+    & svg {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -25,8 +150,30 @@
     font-size: 55px;
     line-height: 120%;
     margin-bottom: 40px;
-    max-width: 800px;
-    width: 100%;
+
+    @media screen and (max-width: 1641px) {
+      font-size: 50px;
+    }
+    @media screen and (max-width: 1401px) {
+      font-size: 44px;
+    }
+    @media screen and (max-width: 1270px) {
+      font-size: 39px;
+    }
+    @media screen and (max-width: 1120px) {
+      font-size: 33px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+    @media screen and (max-width: 769px) {
+      font-size: 24px;
+      text-align: center;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 20px;
+    }
   }
 
   &__buttons {
@@ -35,6 +182,19 @@
     row-gap: 20px;
     max-width: 400px;
     width: 100%;
-    margin-bottom: 177px;
+
+    @media screen and (max-width: 1641px) {
+      max-width: 360px;
+    }
+    @media screen and (max-width: 1401px) {
+      max-width: 320px;
+    }
+    @media screen and (max-width: 769px) {
+      margin: 0 auto;
+      row-gap: 10px;
+    }
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
+    }
   }
 }

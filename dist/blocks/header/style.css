@@ -3,6 +3,7 @@
   padding: 40px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 20;
 }
 
 .header--absolute {
@@ -22,9 +23,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .header__info {
@@ -45,7 +46,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1270px) {
   .header {
     padding: 20px 30px;
   }

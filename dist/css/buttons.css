@@ -86,3 +86,17 @@
   color: #0038FF;
   background-color: transparent;
 }
+
+@media screen and (max-width: 1401px) {
+  .btn {
+    font-size: 18px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .btn {
+    font-size: 16px;
+    height: 50px;
+  }
+}
