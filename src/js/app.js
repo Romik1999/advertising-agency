@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+    console.log(Fancybox);
+
+
+
     let burger = document.querySelector('.hamburger');
     let mobile = document.querySelector('.mobile');
     burger.addEventListener('click', () => {
@@ -187,4 +191,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    var sliderThumbs = new Swiper(".popup-thumbs", {
+        loop: false,
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: ".popup-thumbs__arrow--next",
+            prevEl: ".popup-thumbs__arrow--prev",
+        },
+    });
+    var slider = new Swiper(".popup-slider", {
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".popup-thumbs__arrow--next",
+            prevEl: ".popup-thumbs__arrow--prev",
+        },
+        thumbs: {
+            swiper: sliderThumbs,
+        },
+    });
 });

@@ -1,0 +1,43 @@
+<div class="portfolio-popup" id="portfolio-popup-@@portfolioPopupId">
+    <div class="portfolio-popup__wrapper">
+        <div class="portfolio-popup__gallery">
+            <div class="portfolio-popup__slider">
+                <div class="swiper popup-slider">
+                    <div class="swiper-wrapper popup-slider__items">
+                        <div class="swiper-slide popup-slider__item">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        </div>
+                        <div class="swiper-slide popup-slider__item">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </div>
+                        <div class="swiper-slide popup-slider__item">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-popup__thumbs">
+                @@include('swiper-arrow/swiper-arrow--prev.html', {customClass: 'popup-thumbs__arrow--prev'})
+                <div thumbsSlider="" class="swiper popup-thumbs">
+                    <div class="swiper-wrapper popup-thumbs__items">
+                        <div class="swiper-slide popup-thumbs__item">
+                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        </div>
+                        <div class="swiper-slide popup-thumbs__item">
+                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        </div>
+                        <div class="swiper-slide popup-thumbs__item">
+                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        </div>
+                    </div>
+                </div>
+                @@include('swiper-arrow/swiper-arrow--next.html', {customClass: 'popup-thumbs__arrow--next'})
+            </div>
+        </div>
+        <div class="portfolio-popup__info">
+            <div class="portfolio-popup__title">@@portfolioPopupTitle</div>
+            <div class="portfolio-popup__button btn btn--blue">Оставить заявку</div>
+            <div class="portfolio-popup__text">@@portfolioPopupText</div>
+        </div>
+    </div>
+</div>

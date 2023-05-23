@@ -1,1 +1,27 @@
-.portfolio__text{font-size:20px;padding:25px 0;border-top:2px solid #70f;border-bottom:2px solid #70f;margin-bottom:60px}@media screen and (max-width:1401px){.portfolio__text{margin-bottom:45px;padding:15px 0}}@media screen and (max-width:992px){.portfolio__text{font-size:18px;margin-bottom:30px;padding:10px 0}}@media screen and (max-width:769px){.portfolio__text{font-size:16px;text-align:center;margin-bottom:20px}}
+.portfolio__text {
+  font-size: 20px;
+  padding: 25px 0;
+  border-top: 2px solid #7700FF;
+  border-bottom: 2px solid #7700FF;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 1401px) {
+  .portfolio__text {
+    margin-bottom: 45px;
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .portfolio__text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 769px) {
+  .portfolio__text {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

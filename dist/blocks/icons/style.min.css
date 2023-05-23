@@ -1,1 +1,41 @@
-.icons{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-column-gap:15px;-moz-column-gap:15px;column-gap:15px}.icons__item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:40px;height:40px}.icons__item img,.icons__item svg{display:-webkit-box;display:-ms-flexbox;display:flex;-o-object-fit:contain;object-fit:contain}@media screen and (max-width:1120px){.icons{-webkit-column-gap:10px;-moz-column-gap:10px;column-gap:10px}.icons__item{width:30px;height:30px}}@media screen and (max-width:992px){.icons__item{width:25px;height:25px}}@media screen and (max-width:769px){.icons__item{width:30px;height:30px}}
+.icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 15px;
+}
+@media screen and (max-width: 1120px) {
+  .icons {
+    column-gap: 10px;
+  }
+}
+.icons__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width: 1120px) {
+  .icons__item {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .icons__item {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .icons__item {
+    width: 30px;
+    height: 30px;
+  }
+}
+.icons__item svg, .icons__item img {
+  display: flex;
+  object-fit: contain;
+}

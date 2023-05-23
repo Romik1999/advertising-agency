@@ -1,51 +1,30 @@
 .mobile {
   display: none;
 }
-
-.mobile.active {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.mobile__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  row-gap: 25px;
-}
-
 @media screen and (max-width: 769px) {
   .mobile {
     width: 100%;
     height: calc(100vh - 90px);
     top: 90px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     background-color: #F7F1FF;
     position: fixed;
     padding: 15px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     z-index: 99;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
     right: 0;
-    -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
   }
+}
+.mobile.active {
+  transform: translateX(0);
+}
+.mobile__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  row-gap: 25px;
 }
