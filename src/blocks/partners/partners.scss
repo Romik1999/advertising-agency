@@ -1,0 +1,23 @@
+@import "../../scss/colors.scss";
+
+.partners {
+  &__item {
+    width: auto !important;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      height: 31px;
+    }
+
+    & img{
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+  }
+}

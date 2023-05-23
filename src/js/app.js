@@ -106,4 +106,44 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    const partnersSlider = new Swiper('.partners', {
+        slidesPerView: 'auto',
+        spaceBetween: 80,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.partners__pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.partners__arrow--next',
+            prevEl: '.partners__arrow--prev',
+        },
+        breakpoints: {
+            300: {
+                spaceBetween: 50,
+            },
+            992: {
+                spaceBetween: 80,
+            },
+        }
+    });
+    if (window.innerWidth < 769) {
+        const diplomasSlider = new Swiper('.diplomas', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            pagination: {
+                el: '.diplomas__pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.diplomas__arrow--next',
+                prevEl: '.diplomas__arrow--prev',
+            },
+        });
+    }
+
 });
