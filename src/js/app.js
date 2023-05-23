@@ -146,4 +146,45 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    const servicesSlider = new Swiper('.portfolio-slider', {
+        slidesPerView: 3,
+        grid: {
+            rows: 3,
+            fill: "row",
+        },
+        spaceBetween: 20,
+        pagination: {
+            el: '.portfolio-slider__pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.portfolio-slider__arrow--next',
+            prevEl: '.portfolio-slider__arrow--prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                grid: {
+                    rows: 3,
+                    fill: "row"
+                },
+            },
+            576: {
+                slidesPerView: 2,
+                grid: {
+                    rows: 3,
+                    fill: "row"
+                },
+            },
+            769: {
+                slidesPerView: 3,
+                grid: {
+                    rows: 3,
+                    fill: "row"
+                },
+            },
+        }
+    });
+
 });

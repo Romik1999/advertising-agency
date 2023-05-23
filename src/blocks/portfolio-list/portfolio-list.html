@@ -1,0 +1,23 @@
+<div class="portfolio-list">
+    <div class="portfolio-list__title">Список наших работ и проектов:</div>
+    <div class="portfolio-list__slider">
+        <div class="swiper portfolio-slider">
+            <div class="swiper-wrapper portfolio-slider__items">
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '1', portfolioItemTitle: 'У Палыча'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '2', portfolioItemTitle: 'Пятерочка'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '3', portfolioItemTitle: 'Магнит'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '4', portfolioItemTitle: 'Р.О.С.Долг конференция'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '5', portfolioItemTitle: 'Xiaomi'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '6', portfolioItemTitle: 'Клиника Варикоза нет'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '7', portfolioItemTitle: 'Зубная клиника Риадент'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '8', portfolioItemTitle: 'Аптека вита'})</div>
+                <div class="swiper-slide portfolio-slider__item">@@include('portfolio-item/portfolio-item.html', {portfolioItemNumber: '9', portfolioItemTitle: 'АЗС тольятти'})</div>
+            </div>
+            <div class="swiper-bottom portfolio-slider__bottom">
+                @@include('swiper-arrow/swiper-arrow--prev.html', {customClass: 'portfolio-slider__arrow--prev'})
+                @@include('swiper-pagination/swiper-pagination.html', {customClass: 'portfolio-slider__pagination'})
+                @@include('swiper-arrow/swiper-arrow--next.html', {customClass: 'portfolio-slider__arrow--next'})
+            </div>
+        </div>
+    </div>
+</div>

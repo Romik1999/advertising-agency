@@ -1,0 +1,26 @@
+@import "../../scss/colors.scss";
+
+.portfolio {
+  &__text {
+    font-size: 20px;
+    padding: 25px 0;
+    border-top: 2px solid $violet;
+    border-bottom: 2px solid $violet;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 1401px) {
+      margin-bottom: 45px;
+      padding: 15px 0;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding: 10px 0;
+    }
+    @media screen and (max-width: 769px) {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
