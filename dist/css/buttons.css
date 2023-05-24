@@ -1,78 +1,103 @@
 .btn {
   text-decoration: none;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 15px;
   height: 60px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 5px;
   font-weight: 900;
   font-size: 20px;
   line-height: 120%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   white-space: nowrap;
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   position: relative;
 }
-@media screen and (max-width: 1401px) {
-  .btn {
-    font-size: 18px;
-    height: 55px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .btn {
-    font-size: 16px;
-    height: 50px;
-    padding: 10px;
-  }
-}
+
 .btn:before {
   content: "";
   display: block;
   position: absolute;
   width: 0;
   height: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   z-index: -1;
   left: 0;
 }
+
 .btn--blue {
   background: rgba(247, 241, 255, 0.36);
   border: 3px solid #0038FF;
   color: #0038FF;
 }
+
 .btn--blue:before {
   background-color: #0038FF;
 }
+
 .btn--blue:hover {
   color: #ffffff;
 }
+
 .btn--blue:hover:before {
   width: 100%;
 }
+
 .btn--violet {
   background: rgba(247, 241, 255, 0.35);
   border: 3px solid #7700FF;
   color: #7700FF;
 }
+
 .btn--violet:before {
   background-color: #7700FF;
 }
+
 .btn--violet:hover {
   color: #ffffff;
 }
+
 .btn--violet:hover:before {
   width: 100%;
 }
+
 .btn--blue-full {
   background: #0038FF;
   border: 3px solid #0038FF;
   color: #ffffff;
 }
+
 .btn--blue-full:hover {
   color: #0038FF;
   background-color: transparent;
+}
+
+@media screen and (max-width: 1401px) {
+  .btn {
+    font-size: 18px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .btn {
+    font-size: 16px;
+    height: 50px;
+    padding: 10px;
+  }
 }

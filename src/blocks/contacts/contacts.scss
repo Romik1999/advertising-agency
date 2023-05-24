@@ -1,0 +1,41 @@
+@import "../../scss/colors.scss";
+
+.contacts {
+  &__wrapper {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__info {
+    max-width: 49%;
+    width: 100%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    color: $violet;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 20px;
+
+    & p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 49%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1401px) {
+
+  }
+}
