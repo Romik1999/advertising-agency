@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log(Fancybox);
-
+    Fancybox.bind('[data-fancybox]', {
+        animated: true,
+        compact: false,
+        idle: false,
+        showClass: false,
+        hideClass: false,
+        dragToClose: false,
+    });
 
 
     let burger = document.querySelector('.hamburger');
@@ -150,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const servicesSlider = new Swiper('.portfolio-slider', {
+    const portfolioSlider = new Swiper('.portfolio-slider', {
         slidesPerView: 3,
         grid: {
             rows: 3,
@@ -191,24 +197,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    var sliderThumbs = new Swiper(".popup-thumbs", {
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        navigation: {
-            nextEl: ".popup-thumbs__arrow--next",
-            prevEl: ".popup-thumbs__arrow--prev",
-        },
-    });
-    var slider = new Swiper(".popup-slider", {
-        loop: false,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".popup-thumbs__arrow--next",
-            prevEl: ".popup-thumbs__arrow--prev",
-        },
-        thumbs: {
-            swiper: sliderThumbs,
-        },
-    });
+    let galleries = document.querySelectorAll('.popup-slider');
+
+    if (galleries) {
+        galleries.forEach(gallery => {
+            let galleryThumbs = gallery.parentNode.parentNode.querySelector('.portfolio-popup__thumbs').querySelector('.popup-thumbs')
+
+            let sliderThumbs = new Swiper(galleryThumbs, {
+                loop: false,
+                spaceBetween: 20,
+                slidesPerView: 'auto',
+                navigation: {
+                    nextEl: ".popup-thumbs__arrow--next",
+                    prevEl: ".popup-thumbs__arrow--prev",
+                },
+            });
+            let slider = new Swiper(gallery, {
+                loop: false,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".popup-thumbs__arrow--next",
+                    prevEl: ".popup-thumbs__arrow--prev",
+                },
+                thumbs: {
+                    swiper: sliderThumbs,
+                },
+            });
+        })
+    }
 });
