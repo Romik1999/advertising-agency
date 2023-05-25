@@ -85,6 +85,7 @@
 .btn--blue-full:hover {
   color: #0038FF;
   background-color: transparent;
+  border: 3px solid #0038FF;
 }
 
 @media screen and (max-width: 1401px) {

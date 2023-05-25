@@ -465,6 +465,7 @@ main {
 .section-title {
   font-weight: 900;
   font-size: 44px;
+  line-height: 120%;
   margin-top: 0;
   margin-bottom: 60px;
 }
@@ -1303,6 +1304,52 @@ main {
   border: none;
 }
 
+.students__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.students__info {
+  max-width: 55%;
+  width: 100%;
+}
+
+.students__text {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.students__notice {
+  font-size: 24px;
+  padding: 25px 0;
+  border-top: 2px solid #7700FF;
+  border-bottom: 2px solid #7700FF;
+}
+
+.students__img {
+  max-width: 42%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.students__img img,
+.students__img svg {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 1641px) {
   .hero {
     padding-top: 240px;
@@ -1352,6 +1399,10 @@ main {
 }
 
 @media screen and (max-width: 1441px) {
+  .section-title {
+    font-size: 38px;
+  }
+
   .portfolio-popup {
     padding: 40px 70px;
   }
@@ -1387,6 +1438,14 @@ main {
 
   .feedback__subtitle {
     font-size: 24px;
+  }
+
+  .students__info {
+    max-width: 60%;
+  }
+
+  .students__img {
+    max-width: 40%;
   }
 }
 
@@ -2011,6 +2070,39 @@ main {
   .form__submit {
     height: 55px;
   }
+
+  .students__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .students__info {
+    max-width: 642px;
+    margin: 0 auto;
+  }
+
+  .students__title {
+    text-align: center;
+  }
+
+  .students__text {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .students__notice {
+    font-size: 18px;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .students__img {
+    max-width: 642px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 769px) {
@@ -2377,6 +2469,16 @@ main {
 
   .form__submit {
     height: 50px;
+  }
+
+  .students__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .students__notice {
+    font-size: 16px;
+    padding: 10px 0;
   }
 }
 

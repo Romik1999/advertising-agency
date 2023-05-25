@@ -1,0 +1,87 @@
+@import "../../scss/colors.scss";
+
+.students {
+  &__wrapper {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &__info {
+    max-width: 55%;
+    width: 100%;
+
+    @media screen and (max-width: 1441px) {
+      max-width: 60%;
+    }
+    @media screen and (max-width: 992px) {
+      max-width: 642px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    @media screen and (max-width: 992px) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+      text-align: center;
+    }
+    @media screen and (max-width: 769px) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__notice {
+    font-size: 24px;
+    padding: 25px 0;
+    border-top: 2px solid #7700FF;
+    border-bottom: 2px solid #7700FF;
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+      text-align: center;
+      padding: 15px 0;
+    }
+    @media screen and (max-width: 769px) {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+
+  &__img {
+    max-width: 42%;
+    width: 100%;
+    display: flex;
+
+    @media screen and (max-width: 1441px) {
+      max-width: 40%;
+    }
+    @media screen and (max-width: 992px) {
+      max-width: 642px;
+      margin: 0 auto;
+    }
+
+    & img,
+    & svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
