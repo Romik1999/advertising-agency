@@ -1350,6 +1350,14 @@ main {
   height: auto;
 }
 
+.modal {
+  padding: 70px 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 1640px;
+  width: 100%;
+}
+
 @media screen and (max-width: 1641px) {
   .hero {
     padding-top: 240px;
