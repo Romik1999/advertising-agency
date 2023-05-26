@@ -471,6 +471,7 @@ main {
 
 .footer__text {
   font-size: 24px;
+  line-height: 120%;
   text-align: center;
 }
 
@@ -654,6 +655,7 @@ main {
 
 .advantages__text {
   font-size: 28px;
+  line-height: 120%;
 }
 
 .services {
@@ -2437,7 +2439,10 @@ main {
   }
 
   .footer {
-    padding: 40px 15px;
+    padding-top: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     background: none;
   }
 
@@ -2794,6 +2799,10 @@ main {
 }
 
 @media screen and (max-width: 576px) {
+  .footer__text {
+    font-size: 14px;
+  }
+
   .hero {
     max-width: 100%;
   }
@@ -2806,8 +2815,18 @@ main {
     max-width: 100%;
   }
 
-  .advantages__item {
-    max-width: 100%;
+  .advantages__icon {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+  }
+
+  .advantages__text {
+    font-size: 13px;
+  }
+
+  .services {
+    background: none;
   }
 
   .diplomas-slider__item {
@@ -2829,6 +2848,24 @@ main {
   }
 }
 
+@media screen and (max-width: 365px) {
+  .advantages__items {
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+  }
+
+  .advantages__item {
+    max-width: calc(50% - 2.5px);
+  }
+
+  .advantages__icon {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .hero__image {
     height: 180px;
@@ -2836,5 +2873,11 @@ main {
 
   .hero__title {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 336px) {
+  .advantages__item {
+    max-width: 100%;
   }
 }

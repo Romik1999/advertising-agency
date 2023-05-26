@@ -34,6 +34,7 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  border-radius: 5px 5px 0 0;
 }
 
 .services-card__image img,
@@ -124,6 +125,12 @@
 
   .services-card__text {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .services-card__button {
+    max-width: 100%;
   }
 }
 

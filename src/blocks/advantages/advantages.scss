@@ -46,6 +46,9 @@
       column-gap: 10px;
       row-gap: 10px;
     }
+    @media screen and (max-width: 365px) {
+      column-gap: 5px;
+    }
   }
 
   &__item {
@@ -65,7 +68,10 @@
       column-gap: 10px;
       max-width: calc(50% - 5px);
     }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 365px) {
+      max-width: calc(50% - 2.5px);
+    }
+    @media screen and (max-width: 336px) {
       max-width: 100%;
     }
   }
@@ -101,6 +107,16 @@
       min-width: 50px;
       height: 50px;
     }
+    @media screen and (max-width: 576px) {
+      width: 45px;
+      min-width: 45px;
+      height: 45px;
+    }
+    @media screen and (max-width: 365px) {
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+    }
 
     & img,
     & svg {
@@ -112,6 +128,7 @@
 
   &__text{
     font-size: 28px;
+    line-height: 120%;
 
     @media screen and (max-width: 1641px) {
       font-size: 25px;
@@ -127,6 +144,9 @@
     }
     @media screen and (max-width: 769px) {
       font-size: 14px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 13px;
     }
   }
 }
