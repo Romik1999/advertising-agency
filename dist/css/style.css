@@ -654,6 +654,11 @@ main {
   font-size: 28px;
 }
 
+.services {
+  background: left top/250px 100% repeat-y url("../img/services-bg-left.png"), right top/500px 100% repeat-y url("../img/services-bg-right.png");
+  background-size: auto;
+}
+
 .services-cards__items {
   display: -webkit-box;
   display: -ms-flexbox;
