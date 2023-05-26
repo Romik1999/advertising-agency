@@ -248,3 +248,9 @@
     height: 240px;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .portfolio-popup__button {
+    max-width: 100%;
+  }
+}

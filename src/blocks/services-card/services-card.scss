@@ -24,6 +24,7 @@
     min-height: 230px;
     display: flex;
     overflow: hidden;
+    border-radius: 5px 5px 0 0;
 
     @media screen and (max-width: 1199px) {
       height: 200px;
@@ -98,5 +99,9 @@
     max-width: 370px;
     margin-top: auto;
     margin-bottom: 0;
+
+    @media screen and (max-width: 769px) {
+      max-width: 100%;
+    }
   }
 }

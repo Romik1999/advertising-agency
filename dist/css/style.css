@@ -725,6 +725,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  border-radius: 5px 5px 0 0;
 }
 
 .services-card__image img,
@@ -1425,6 +1426,7 @@ main {
 }
 
 .thanks {
+  display: none;
   padding: 70px 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2449,6 +2451,7 @@ main {
 
   .hero {
     padding-top: 100px;
+    padding-bottom: 35px;
   }
 
   .hero__info {
@@ -2513,6 +2516,14 @@ main {
 
   .advantages__text {
     font-size: 14px;
+  }
+
+  .services-card__button {
+    max-width: 100%;
+  }
+
+  .about {
+    padding-top: 70px;
   }
 
   .about__top {
@@ -2801,6 +2812,10 @@ main {
 
   .diplomas-slider__item {
     width: 135px !important;
+  }
+
+  .portfolio-popup__button {
+    max-width: 100%;
   }
 
   .contacts__img {

@@ -4,6 +4,10 @@
   padding-top: 140px;
   background: url("../img/about-bg.png") center left  no-repeat;
 
+  @media screen and (max-width: 769px) {
+    padding-top: 70px;
+  }
+
   &__top {
     display: flex;
     column-gap: 30px;

@@ -55,6 +55,10 @@
 }
 
 @media screen and (max-width: 769px) {
+  .about {
+    padding-top: 70px;
+  }
+
   .about__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
