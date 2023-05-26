@@ -66,9 +66,19 @@ main {
   margin-top: 20px;
 }
 
+.fancybox__slide {
+  padding: 30px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media screen and (max-width: 992px) {
   section {
     padding: 50px 15px;
+  }
+
+  .fancybox__slide {
+    padding: 15px !important;
   }
 }
 

@@ -113,12 +113,6 @@
      object-fit: cover;
 }
 
-.fancybox__slide {
-  padding: 30px !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 @media screen and (max-width: 1441px) {
   .portfolio-popup {
     padding: 40px 70px;

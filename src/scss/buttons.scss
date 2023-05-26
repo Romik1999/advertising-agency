@@ -33,6 +33,10 @@
     padding: 10px;
   }
 
+  &:focus{
+    outline: none;
+  }
+
   &:before {
     content: '';
     display: block;
