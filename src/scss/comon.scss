@@ -45,12 +45,21 @@ main {
 .swiper {
   overflow: hidden;
 
-  &-bottom{
+  &-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 15px;
     margin-top: 20px;
+  }
+}
+
+.fancybox__slide {
+  padding: 30px !important;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 992px) {
+    padding: 15px !important;
   }
 }
 
