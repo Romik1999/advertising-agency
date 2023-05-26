@@ -1,9 +1,17 @@
 @import "../../scss/colors.scss";
 
 .footer {
+  background: left bottom no-repeat url("../img/footer-bg-left.png"), right bottom no-repeat url("../img/footer-bg-right.png");
+  background-size: auto;
   padding: 60px 30px;
+
+  @media screen and (max-width: 992px) {
+    background: left bottom / auto 100px  no-repeat url("../img/footer-bg-left.png"), right bottom / auto 100px no-repeat url("../img/footer-bg-right.png");
+  }
+
   @media screen and (max-width: 769px) {
     padding: 40px 15px;
+    background: none;
   }
   
   &__text {

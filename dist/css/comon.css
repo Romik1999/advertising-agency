@@ -23,7 +23,7 @@ section {
   padding: 70px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
+  position: relative;
 }
 
 main {

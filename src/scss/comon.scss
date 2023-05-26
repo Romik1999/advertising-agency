@@ -18,7 +18,8 @@ body {
 section {
   padding: 70px 30px;
   box-sizing: border-box;
-  overflow: hidden;
+  //overflow: hidden;
+  position: relative;
 
   @media screen and (max-width: 992px) {
     padding: 50px 15px;

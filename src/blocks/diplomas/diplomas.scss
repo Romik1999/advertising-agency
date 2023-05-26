@@ -1,33 +1,35 @@
 @import "../../scss/colors.scss";
 
 .diplomas {
-  &__item {
-    width: 16.66% !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding-top: 20px;
 
-    @media screen and (max-width: 769px) {
-      width: 200px !important;
-    }
-    @media screen and (max-width: 576px) {
-      width: 135px !important;
-    }
-
-    & img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__bottom {
-    display: none;
-
-    @media screen and (max-width: 769px) {
+  &-slider {
+    &__item {
+      width: 16.66% !important;
       display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 769px) {
+        width: 200px !important;
+      }
+      @media screen and (max-width: 576px) {
+        width: 135px !important;
+      }
+
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__bottom {
+      display: none;
+
+      @media screen and (max-width: 769px) {
+        display: flex;
+      }
     }
   }
-
-
 }

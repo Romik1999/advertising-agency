@@ -1,6 +1,17 @@
 @import "../../scss/colors.scss";
 
 .contacts {
+  background: url("../img/contacts-bg.png") top right  no-repeat;
+
+  @media screen and (max-width: 1441px) {
+    background-size: contain;
+  }
+  @media screen and (max-width: 992px) {
+  }
+  @media screen and (max-width: 769px) {
+    background: none;
+  }
+
   &__wrapper {
     display: flex;
     align-items: flex-start;

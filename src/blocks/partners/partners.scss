@@ -1,23 +1,38 @@
 @import "../../scss/colors.scss";
 
 .partners {
-  &__item {
-    //width: auto !important;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: 992px) {
+    padding: 0 15px;
+  }
+
+  &__slider {
+    border-top: 2px solid $violet;
+    border-bottom: 2px solid $violet;
+    padding: 30px 0;
 
     @media screen and (max-width: 992px) {
-      height: 31px;
-    }
-
-    & img{
-      height: 100%;
-      width: auto;
+      padding: 15px 0;
     }
   }
 
-  @media screen and (max-width: 992px) {
+  &-slider {
+    &__item {
+      width: auto !important;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 992px) {
+        height: 31px;
+      }
+
+      & img {
+        height: 100%;
+        width: auto;
+      }
+    }
   }
 }

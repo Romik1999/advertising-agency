@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    const partnersSlider = new Swiper('.partners', {
+    const partnersSlider = new Swiper('.partners-slider', {
         slidesPerView: 'auto',
         spaceBetween: 80,
         loop: true,
@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded', function () {
             disableOnInteraction: false,
         },
         pagination: {
-            el: '.partners__pagination',
+            el: '.partners-slider__pagination',
             clickable: true
         },
         navigation: {
-            nextEl: '.partners__arrow--next',
-            prevEl: '.partners__arrow--prev',
+            nextEl: '.partners-slider__arrow--next',
+            prevEl: '.partners-slider__arrow--prev',
         },
         breakpoints: {
             300: {
@@ -142,16 +142,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     if (window.innerWidth < 769) {
-        const diplomasSlider = new Swiper('.diplomas', {
+        const diplomasSlider = new Swiper('.diplomas-slider', {
             slidesPerView: 'auto',
             spaceBetween: 10,
             pagination: {
-                el: '.diplomas__pagination',
+                el: '.diplomas-slider__pagination',
                 clickable: true
             },
             navigation: {
-                nextEl: '.diplomas__arrow--next',
-                prevEl: '.diplomas__arrow--prev',
+                nextEl: '.diplomas-slider__arrow--next',
+                prevEl: '.diplomas-slider__arrow--prev',
             },
         });
     }
