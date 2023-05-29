@@ -113,6 +113,14 @@
   text-decoration-line: underline;
   color: #0038FF;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.contacts__certificates {
+  display: none;
 }
 
 @media screen and (max-width: 1441px) {

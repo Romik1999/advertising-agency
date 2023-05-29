@@ -1,7 +1,7 @@
 @import "../../scss/colors.scss";
 
 .contacts {
-  background: url("../img/contacts-bg.png") top right  no-repeat;
+  background: url("../img/contacts-bg.png") top right no-repeat;
 
   @media screen and (max-width: 1441px) {
     background-size: contain;
@@ -189,6 +189,8 @@
     text-decoration-line: underline;
     color: $blue;
     display: block;
+    width: fit-content;
+    margin: 0 auto;
 
     @media screen and (max-width: 1270px) {
       font-size: 20px;
@@ -201,7 +203,7 @@
     }
   }
 
-  @media screen and (max-width: 1401px) {
-
+  &__certificates {
+    display: none;
   }
 }

@@ -8,6 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
         dragToClose: false,
     });
 
+    let galleryImgs = [];
+    let imgs = document.querySelectorAll('.contacts__certificate');
+
+    imgs.forEach(img => {
+        let src = img.getAttribute('src');
+        let item = {src: src}
+        galleryImgs.push(item);
+    });
+
+    let certificatesBtn = document.querySelector('.contacts__notice');
+
+    certificatesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        Fancybox.show(galleryImgs, {});
+    })
 
     let burger = document.querySelector('.hamburger');
     let mobile = document.querySelector('.mobile');
