@@ -13,6 +13,24 @@
     }
   }
 
+  &__img {
+    position: absolute;
+    z-index: -1;
+
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media screen and (max-width: 1441px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 992px) {
+        width: 250px;
+      }
+    }
+  }
+
   &__info {
     max-width: 55%;
     width: 100%;
@@ -63,7 +81,7 @@
     }
   }
 
-  &__img {
+  &__image {
     max-width: 42%;
     width: 100%;
     display: flex;
