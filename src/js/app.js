@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
         dragToClose: false,
     });
 
+
+    let servicesButtons = document.querySelectorAll('.services-card__button');
+    let servicesInput = document.getElementById('service');
+
+    servicesButtons.forEach(servicesButton => {
+        servicesButton.addEventListener('click', () => {
+            servicesInput.value = servicesButton.parentNode.querySelector('.services-card__title').innerText
+        })
+    })
+
     let galleryImgs = [];
     let imgs = document.querySelectorAll('.contacts__certificate');
 
