@@ -9,26 +9,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // let hrefs = document.querySelectorAll('.js-scroller')
-    // hrefs.forEach(href => {
-    //     href.addEventListener('click', (e) => {
-    //         e.preventDefault();
-    //         let id = e.target.getAttribute('href').slice(1)
-    //         let scrollTarget = document.getElementById(id);
-    //         let topOffset = document.querySelector('.header').offsetHeight;
-    //         let elementPosition = scrollTarget.getBoundingClientRect().top;
-    //         let offsetPosition = elementPosition - topOffset;
-    //         if (mobile) {
-    //             mobile.classList.remove('active')
-    //             burger.classList.remove('active')
-    //             document.body.style.overflow = "visible"
-    //         }
-    //         window.scrollBy({
-    //             top: offsetPosition,
-    //             behavior: 'smooth'
-    //         });
-    //     })
-    // });
+    let hrefs = document.querySelectorAll('.menu__items a')
+    hrefs.forEach(href => {
+        href.addEventListener('click', (e) => {
+            e.preventDefault();
+            let id = e.target.getAttribute('href').slice(1)
+            console.log(id);
+            let scrollTarget = document.getElementById(id);
+            let topOffset = document.querySelector('.header').offsetHeight;
+            let elementPosition = scrollTarget.getBoundingClientRect().top;
+            let offsetPosition = elementPosition - topOffset;
+            if (mobile) {
+                mobile.classList.remove('active')
+                burger.classList.remove('active')
+                document.body.style.overflow = "visible"
+            }
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        })
+    });
 
     let servicesButtons = document.querySelectorAll('.services-card__button');
     let servicesInput = document.getElementById('service');
