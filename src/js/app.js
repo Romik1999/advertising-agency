@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let id = e.target.getAttribute('href').slice(1)
             console.log(id);
             let scrollTarget = document.getElementById(id);
-            let topOffset = document.querySelector('.header').offsetHeight;
+            let topOffset = 0;
             let elementPosition = scrollTarget.getBoundingClientRect().top;
             let offsetPosition = elementPosition - topOffset;
             if (mobile) {
