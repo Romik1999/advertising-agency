@@ -9,14 +9,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // let hrefs = document.querySelectorAll('.js-scroller')
+    // hrefs.forEach(href => {
+    //     href.addEventListener('click', (e) => {
+    //         e.preventDefault();
+    //         let id = e.target.getAttribute('href').slice(1)
+    //         let scrollTarget = document.getElementById(id);
+    //         let topOffset = document.querySelector('.header').offsetHeight;
+    //         let elementPosition = scrollTarget.getBoundingClientRect().top;
+    //         let offsetPosition = elementPosition - topOffset;
+    //         if (mobile) {
+    //             mobile.classList.remove('active')
+    //             burger.classList.remove('active')
+    //             document.body.style.overflow = "visible"
+    //         }
+    //         window.scrollBy({
+    //             top: offsetPosition,
+    //             behavior: 'smooth'
+    //         });
+    //     })
+    // });
+
     let servicesButtons = document.querySelectorAll('.services-card__button');
     let servicesInput = document.getElementById('service');
 
-    servicesButtons.forEach(servicesButton => {
-        servicesButton.addEventListener('click', () => {
-            servicesInput.value = servicesButton.parentNode.querySelector('.services-card__title').innerText
+    if (servicesButtons) {
+        servicesButtons.forEach(servicesButton => {
+            servicesButton.addEventListener('click', () => {
+                servicesInput.value = servicesButton.parentNode.querySelector('.services-card__title').innerText
+            })
         })
-    })
+    }
 
     let galleryImgs = [];
     let imgs = document.querySelectorAll('.contacts__certificate');
