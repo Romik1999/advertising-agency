@@ -1357,7 +1357,6 @@ input.form__input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 20px;
-  color: rgba(54, 52, 53, 0.5);
   cursor: pointer;
 }
 
