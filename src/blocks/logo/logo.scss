@@ -1,6 +1,6 @@
 @import "../../scss/colors.scss";
 
-.logo {
+.custom-logo-link {
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -27,22 +27,19 @@
 
   & img,
   & svg{
-    width: 118px;
+    width: auto;
     height: 118px;
     object-fit: contain;
 
     @media screen and (max-width: 1270px) {
-      width: 94px;
       height: 94px;
     }
 
     @media screen and (max-width: 1120px) {
-      width: 80px;
       height: 80px;
     }
 
     @media screen and (max-width: 992px) {
-      width: 60px;
       height: 60px;
     }
   }

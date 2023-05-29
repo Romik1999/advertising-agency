@@ -346,7 +346,7 @@ main {
      object-fit: contain;
 }
 
-.logo {
+.custom-logo-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,9 +363,9 @@ main {
   line-height: 120%;
 }
 
-.logo img,
-.logo svg {
-  width: 118px;
+.custom-logo-link img,
+.custom-logo-link svg {
+  width: auto;
   height: 118px;
   -o-object-fit: contain;
      object-fit: contain;
@@ -389,7 +389,7 @@ main {
   list-style: none;
 }
 
-.menu__link {
+.menu__items a {
   font-size: 24px;
   line-height: 120%;
   text-decoration: none;
@@ -404,7 +404,7 @@ main {
   display: flex;
 }
 
-.menu__link:hover {
+.menu__items a:hover {
   color: #7700FF;
 }
 
@@ -1201,6 +1201,15 @@ main {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.contacts__notice:hover {
+  text-decoration: none;
+  color: #7700FF;
 }
 
 .contacts__certificates {
@@ -1762,20 +1771,19 @@ main {
     padding: 20px 30px;
   }
 
-  .logo {
+  .custom-logo-link {
     font-size: 22px;
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
             column-gap: 15px;
   }
 
-  .logo img,
-  .logo svg {
-    width: 94px;
+  .custom-logo-link img,
+  .custom-logo-link svg {
     height: 94px;
   }
 
-  .menu__link {
+  .menu__items a {
     font-size: 20px;
   }
 
@@ -1970,20 +1978,19 @@ main {
     height: 30px;
   }
 
-  .logo {
+  .custom-logo-link {
     font-size: 18px;
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
   }
 
-  .logo img,
-  .logo svg {
-    width: 80px;
+  .custom-logo-link img,
+  .custom-logo-link svg {
     height: 80px;
   }
 
-  .menu__link {
+  .menu__items a {
     font-size: 16px;
   }
 
@@ -2074,13 +2081,12 @@ main {
     height: 25px;
   }
 
-  .logo {
+  .custom-logo-link {
     font-size: 16px;
   }
 
-  .logo img,
-  .logo svg {
-    width: 60px;
+  .custom-logo-link img,
+  .custom-logo-link svg {
     height: 60px;
   }
 
@@ -2090,7 +2096,7 @@ main {
             column-gap: 10px;
   }
 
-  .menu__link {
+  .menu__items a {
     font-size: 14px;
   }
 
@@ -2475,7 +2481,7 @@ main {
     row-gap: 15px;
   }
 
-  .menu__link {
+  .menu__items a {
     font-size: 16px;
   }
 

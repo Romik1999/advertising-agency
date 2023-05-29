@@ -117,6 +117,15 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.contacts__notice:hover {
+  text-decoration: none;
+  color: #7700FF;
 }
 
 .contacts__certificates {
