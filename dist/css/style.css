@@ -475,6 +475,21 @@ main {
   text-align: center;
 }
 
+.footer__text a {
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer__text a:hover {
+  color: #7700FF;
+}
+
 .section-title {
   font-weight: 900;
   font-size: 44px;
@@ -1409,6 +1424,77 @@ input.form__input::placeholder {
   color: rgba(54, 52, 53, 0.5);
 }
 
+textarea.form__input {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #7700FF;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 5px;
+  padding: 17px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  resize: none;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+textarea.form__input:focus {
+  outline: none;
+}
+
+textarea.form__input::-webkit-input-placeholder {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(54, 52, 53, 0.5);
+}
+
+textarea.form__input::-moz-placeholder {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(54, 52, 53, 0.5);
+}
+
+textarea.form__input:-ms-input-placeholder {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(54, 52, 53, 0.5);
+}
+
+textarea.form__input::-ms-input-placeholder {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(54, 52, 53, 0.5);
+}
+
+textarea.form__input::placeholder {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(54, 52, 53, 0.5);
+}
+
 span.wpcf7-form-control-wrap {
   display: block;
 }
@@ -1508,12 +1594,57 @@ span.wpcf7-form-control-wrap:not(:last-child) {
 }
 
 .thanks {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(54, 52, 53, 0.95);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.thanks--active {
+  z-index: 20;
+  opacity: 1;
+}
+
+.thanks__close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.thanks__content {
   padding: 70px 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 1100px;
   width: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  position: relative;
 }
 
 .thanks__wrapper {
@@ -1531,6 +1662,7 @@ span.wpcf7-form-control-wrap:not(:last-child) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .thanks__img {
@@ -1711,7 +1843,12 @@ span.wpcf7-form-control-wrap:not(:last-child) {
     font-size: 24px;
   }
 
-  .thanks {
+  .thanks__close {
+    top: 35px;
+    right: 35px;
+  }
+
+  .thanks__content {
     padding: 35px 50px;
   }
 
@@ -2397,6 +2534,32 @@ span.wpcf7-form-control-wrap:not(:last-child) {
     font-size: 18px;
   }
 
+  textarea.form__input {
+    font-size: 18px;
+    height: 150px;
+    padding: 15px 20px;
+  }
+
+  textarea.form__input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+
+  textarea.form__input::-moz-placeholder {
+    font-size: 18px;
+  }
+
+  textarea.form__input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+
+  textarea.form__input::-ms-input-placeholder {
+    font-size: 18px;
+  }
+
+  textarea.form__input::placeholder {
+    font-size: 18px;
+  }
+
   span.wpcf7-form-control-wrap:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -2456,7 +2619,7 @@ span.wpcf7-form-control-wrap:not(:last-child) {
     max-width: 454px;
   }
 
-  .thanks {
+  .thanks__content {
     padding: 20px 30px;
   }
 
@@ -2870,6 +3033,32 @@ span.wpcf7-form-control-wrap:not(:last-child) {
     font-size: 16px;
   }
 
+  textarea.form__input {
+    font-size: 16px;
+    height: 50px;
+    padding: 12px 20px;
+  }
+
+  textarea.form__input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  textarea.form__input::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  textarea.form__input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  textarea.form__input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  textarea.form__input::placeholder {
+    font-size: 16px;
+  }
+
   .students__text {
     font-size: 16px;
     margin-bottom: 20px;
@@ -2893,7 +3082,14 @@ span.wpcf7-form-control-wrap:not(:last-child) {
     margin-bottom: 15px;
   }
 
-  .thanks {
+  .thanks__close {
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .thanks__content {
     padding: 20px 10px;
   }
 

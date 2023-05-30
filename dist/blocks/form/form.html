@@ -1,18 +1,98 @@
-<form class="form">
-    <div class="form__fields">
-        <div class="form__field">
-            <input class="form__input" id="fio" placeholder="Как к вам обращаться?">
-        </div>
-        <div class="form__field">
-            <input class="form__input" id="phone" placeholder="Телефон для связи">
-        </div>
-        <div class="form__field">
-            <input class="form__input" id="email" placeholder="Электронная почта">
-        </div>
-        <div class="form__field">
-            <input class="form__input" id="service" placeholder="Какая услуга Вам нужна? (необязательно)">
-        </div>
+<form action="/#wpcf7-f32-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма"
+      novalidate="novalidate" data-status="init">
+    <div style="display: none;">
+        <input type="hidden" name="_wpcf7" value="32">
+        <input type="hidden" name="_wpcf7_version" value="5.7.6">
+        <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f32-o1">
+        <input type="hidden" name="_wpcf7_container_post" value="0">
+        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
     </div>
-    <button class="form__submit btn btn--blue-full" type="submit">Отправить</button>
+    <p><span class="wpcf7-form-control-wrap" data-name="fio"><input size="40"
+                                                                    class="wpcf7-form-control wpcf7-text form__input"
+                                                                    id="fio" aria-invalid="false"
+                                                                    placeholder="Как к вам обращаться?" value=""
+                                                                    type="text" name="fio"></span><span
+            class="wpcf7-form-control-wrap" data-name="phone"><input size="40"
+                                                                     class="wpcf7-form-control wpcf7-text form__input"
+                                                                     id="phone" aria-invalid="false"
+                                                                     placeholder="Телефон для связи" value=""
+                                                                     type="tel" name="phone"></span><span
+            class="wpcf7-form-control-wrap" data-name="email"><input size="40"
+                                                                     class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form__input"
+                                                                     id="email" aria-invalid="false"
+                                                                     placeholder="Электронная почта" value=""
+                                                                     type="email" name="email"></span><span
+            class="wpcf7-form-control-wrap" data-name="service"><input size="40"
+                                                                       class="wpcf7-form-control wpcf7-text form__input"
+                                                                       id="service" aria-invalid="false"
+                                                                       placeholder="Какая услуга Вам нужна? (необязательно)"
+                                                                       value="" type="text" name="service"></span><input
+            class="wpcf7-form-control has-spinner wpcf7-submit form__submit" type="submit" value="Отправить"><span
+            class="wpcf7-spinner"></span>
+    </p>
+    <div class="wpcf7-response-output" aria-hidden="true"></div>
 </form>
 
+<script>
+    function maskPhone(e) {
+        const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
+        var valSize = e.target.value.trim().replace(/\D/g, "").length;
+        e = e || window.event;
+        var key = e.keyCode || e.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\+/;
+        if (!regex.test(key)) {
+            e.returnValue = false;
+            if (e.preventDefault) e.preventDefault();
+        } else {
+            if (valSize !== 0 && key === "+") {
+                e.returnValue = false;
+                return;
+            }
+            if (valSize === 0) {
+                if (key === "8" || key === "7") {
+                    e.target.value = "+7";
+                    e.returnValue = false;
+                } else if (key === "9") {
+                    e.target.value = "+7 (9";
+                    e.returnValue = false;
+                } else if (key !== "+") {
+                    e.target.value = "+7 (9";
+                } else if (key === "+" && e.target.value === "+") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 1) {
+                e.target.value = "+7 (9";
+                if (key === "9") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 4) {
+                if (e.target.value.slice(-1) === ")") {
+                    e.target.value = e.target.value.trim() + " ";
+                } else if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + ") ";
+            } else if (valSize === 7 || valSize === 9) {
+                if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + " ";
+            } else if (valSize === 11) {
+                e.returnValue = false;
+            }
+        }
+    }
+
+    function onPastePhone(e) {
+        e.preventDefault();
+        const mask = /(7|8)(9\d{2})(\d{3})(\d{2})(\d{2})/;
+        var phone = e.clipboardData.getData('text/plain').replace(/\D/g, "");
+        if (!mask.test(phone)) {
+            e.returnValue = false;
+            return;
+        }
+        var matched = phone.match(mask);
+        e.target.value = "+7 (" + matched[2] + ") " + matched[3] + " " + matched[4] + " " + matched[5];
+        e.returnValue = false;
+    }
+</script>

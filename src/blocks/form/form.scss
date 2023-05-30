@@ -100,6 +100,54 @@ input.form__input{
   }
 }
 
+textarea.form__input{
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #7700FF;
+  backdrop-filter: blur(2px);
+  border-radius: 5px;
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  @media screen and (max-width: 992px) {
+    font-size: 18px;
+    height: 150px;
+    padding: 15px 20px;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 16px;
+    height: 50px;
+    padding: 12px 20px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(54, 52, 53, 0.5);
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 769px) {
+      font-size: 16px;
+    }
+  }
+}
+
 span.wpcf7-form-control-wrap{
   display: block;
 
