@@ -33,12 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let servicesButtons = document.querySelectorAll('.services-card__button');
     let servicesInput = document.getElementById('service');
+    let heroButton = document.querySelector('.hero__button');
 
     if (servicesButtons) {
         servicesButtons.forEach(servicesButton => {
             servicesButton.addEventListener('click', () => {
                 servicesInput.value = servicesButton.parentNode.querySelector('.services-card__title').innerText
             })
+        })
+    }
+
+    if (heroButton){
+        heroButton.addEventListener('click', () => {
+            servicesInput.value = '';
         })
     }
 
