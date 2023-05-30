@@ -23,8 +23,17 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   opacity: 1;
+  margin: 0 !important;
 }
 
 .swiper-pagination-bullet-active {
   background: #0038FF;
+}
+
+@media screen and (max-width: 769px) {
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+  }
 }

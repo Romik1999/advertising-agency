@@ -544,6 +544,7 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   opacity: 1;
+  margin: 0 !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -2340,6 +2341,9 @@ span.wpcf7-form-control-wrap:not(:last-child) {
        -moz-column-gap: 0;
             column-gap: 0;
     row-gap: 0;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 
   .services-cards__item {
@@ -2729,6 +2733,12 @@ span.wpcf7-form-control-wrap:not(:last-child) {
 
   .section-title {
     text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
   }
 
   .hero {

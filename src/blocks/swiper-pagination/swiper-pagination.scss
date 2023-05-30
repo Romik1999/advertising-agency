@@ -15,6 +15,13 @@
     background: rgba(54, 52, 53, 0.5);
     box-sizing: border-box;
     opacity: 1;
+    margin: 0!important;
+
+    @media screen and (max-width: 769px) {
+      width: 12px;
+      height: 12px;
+      min-width: 12px;
+    }
 
     &-active{
       background: $blue;

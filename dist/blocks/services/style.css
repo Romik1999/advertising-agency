@@ -39,6 +39,9 @@
        -moz-column-gap: 0;
             column-gap: 0;
     row-gap: 0;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 
   .services-cards__item {
