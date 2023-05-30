@@ -10,6 +10,21 @@
   text-align: center;
 }
 
+.footer__text a {
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer__text a:hover {
+  color: #7700FF;
+}
+
 @media screen and (max-width: 1270px) {
   .footer__text {
     font-size: 20px;
