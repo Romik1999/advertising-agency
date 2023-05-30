@@ -19,6 +19,7 @@
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  margin-top: 15px;
 }
 
 .footer__text a:hover {
