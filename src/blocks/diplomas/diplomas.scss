@@ -5,7 +5,7 @@
 
   &-slider {
     &__item {
-      width: 16.66% !important;
+      //width: 16.66% !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -24,12 +24,12 @@
       }
     }
 
-    &__bottom {
-      display: none;
-
-      @media screen and (max-width: 769px) {
-        display: flex;
-      }
-    }
+    //&__bottom {
+    //  display: none;
+    //
+    //  @media screen and (max-width: 769px) {
+    //    display: flex;
+    //  }
+    //}
   }
 }

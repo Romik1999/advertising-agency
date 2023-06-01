@@ -873,7 +873,6 @@ main {
 }
 
 .diplomas-slider__item {
-  width: 16.66% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -890,10 +889,6 @@ main {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.diplomas-slider__bottom {
-  display: none;
 }
 
 .portfolio__img {
@@ -2842,12 +2837,6 @@ span.wpcf7-form-control-wrap:not(:last-child) {
 
   .diplomas-slider__item {
     width: 200px !important;
-  }
-
-  .diplomas-slider__bottom {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .portfolio__img--left {

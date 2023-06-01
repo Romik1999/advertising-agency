@@ -146,20 +146,26 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         }
     });
-    if (window.innerWidth < 769) {
-        const diplomasSlider = new Swiper('.diplomas-slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-            pagination: {
-                el: '.diplomas-slider__pagination',
-                clickable: true
+    const diplomasSlider = new Swiper('.diplomas-slider', {
+        slidesPerView: 6,
+        spaceBetween: 10,
+        pagination: {
+            el: '.diplomas-slider__pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.diplomas-slider__arrow--next',
+            prevEl: '.diplomas-slider__arrow--prev',
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 'auto',
             },
-            navigation: {
-                nextEl: '.diplomas-slider__arrow--next',
-                prevEl: '.diplomas-slider__arrow--prev',
+            769: {
+                slidesPerView: 6,
             },
-        });
-    }
+        }
+    });
 
     const portfolioSlider = new Swiper('.portfolio-slider', {
         slidesPerView: 3,
@@ -248,10 +254,9 @@ form.forEach(item => {
     }, false);
 });
 
-thanksModalClose.addEventListener('click', ()=>{
+thanksModalClose.addEventListener('click', () => {
     thanksModal.classList.remove('thanks--active');
 })
-
 
 
 let phoneInputs = document.querySelectorAll('input[type="tel"]');
